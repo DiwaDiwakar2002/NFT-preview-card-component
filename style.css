@@ -1,0 +1,159 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+
+    /* ### Primary */
+
+ --Soft-blue: hsl(215, 51%, 70%);
+ --Cyan: hsl(178, 100%, 50%);
+
+/* ### Neutral */
+
+--main-BG: hsl(217, 54%, 11%);
+--card-BG: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-BG);
+    font-size: 18px;
+    color: var(--White);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.equilibrium-img{
+    position: relative;
+}
+
+.img-overlay{
+    position: absolute;
+    background-color:  hsl(178, 100%, 50%, 60%);
+    top: 0;
+    height: calc( 100% - 4px);
+    width: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.img-overlay:hover{
+
+    opacity: 1;
+    cursor: pointer;
+    
+}
+.img-overlay img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+
+}
+
+li{
+    display: flex;
+    align-items: center;
+}
+
+li img{
+    margin: 10px;
+}
+
+.container ul li:first-child{
+    color: var(--Cyan);
+    font-weight: 600;
+}
+
+.container{
+    background-color: var(--card-BG);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px rgba(0,0,0,0.5);
+    margin-top: 50px;
+}
+
+h2{
+    font-weight: 600;
+    margin: 30px 0 ;
+    transition: 0.5s ease-in-out;
+
+}
+
+h2:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+p{
+    font-weight: 300;
+    color: var(--Soft-blue);
+}
+
+.days{
+    color: var(--Soft-blue);
+
+}
+
+.list{
+    border-bottom: 1px var(--line) solid;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0 0;
+
+}
+
+.bottom img{
+    width: 50px;
+    border: 2px solid var(--White) ;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+span{
+    color: var(--White);
+    font-weight: 400;
+    transition: 0.5s ease-in-out;
+}
+
+span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+
+}
+
+@media (min-width: 500px) {
+    .container{
+        width: 400px;
+       
+    }
+}
